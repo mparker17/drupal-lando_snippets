@@ -1,0 +1,5 @@
+tooling:
+  lint-syntax-php:
+    service: 'appserver'
+    cmd:
+      - 'php -l'

@@ -1,0 +1,7 @@
+tooling:
+  bower:
+    service: 'node'
+    run:
+      - 'cd /app/docroot/themes/custom/example && npx bower install'
+    cmd:
+      - 'cd /app/docroot/themes/custom/example && npx bower'

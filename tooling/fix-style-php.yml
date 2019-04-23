@@ -1,0 +1,5 @@
+tooling:
+  fix-style-php:
+    service: 'appserver'
+    cmd:
+      - '/app/vendor/bin/phpcbf --standard=/app/vendor/drupal/coder/coder_sniffer/Drupal'

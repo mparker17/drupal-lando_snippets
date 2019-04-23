@@ -1,0 +1,5 @@
+tooling:
+  lint-syntax-js:
+    service: 'node'
+    cmd:
+      - 'node -c'

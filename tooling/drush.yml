@@ -1,0 +1,5 @@
+tooling:
+  drush:
+    service: appserver
+    cmd:
+      - 'cd /app/docroot && drush'

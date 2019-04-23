@@ -1,0 +1,5 @@
+tooling:
+  lint-style-php:
+    service: 'appserver'
+    cmd:
+      - '/app/vendor/bin/phpcs --standard=/app/vendor/drupal/coder/coder_sniffer/Drupal'

@@ -1,0 +1,7 @@
+tooling:
+  grunt:
+    service: 'node'
+    run:
+      - 'cd /app/docroot/themes/custom/example && npx grunt build'
+    cmd:
+      - 'cd /app/docroot/themes/custom/example && npx grunt'

@@ -1,0 +1,5 @@
+tooling:
+  node:
+    service: 'node'
+  npm:
+    service: 'node'
