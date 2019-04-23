@@ -1,0 +1,5 @@
+services:
+  node:
+    type: node
+    run:
+      - 'cd /app/docroot/themes/custom/example && npm install'

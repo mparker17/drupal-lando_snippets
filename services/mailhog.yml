@@ -1,0 +1,5 @@
+services:
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - 'appserver'
