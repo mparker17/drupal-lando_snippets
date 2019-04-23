@@ -1,0 +1,7 @@
+name: drupal
+recipe: drupal8
+services:
+  mailhog:
+    type: 'mailhog'
+    hogfrom:
+      - 'appserver'

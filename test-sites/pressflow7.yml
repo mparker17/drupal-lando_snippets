@@ -1,0 +1,7 @@
+name: pressflow7
+recipe: drupal7
+services:
+  mailhog:
+    type: 'mailhog'
+    hogfrom:
+      - 'appserver'
