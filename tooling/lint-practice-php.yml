@@ -1,0 +1,5 @@
+tooling:
+  lint-practice-php:
+    service: 'appserver'
+    cmd:
+      - '/app/vendor/bin/phpcs --standard=/app/vendor/drupal/coder/coder_sniffer/DrupalPractice'
