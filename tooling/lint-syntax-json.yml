@@ -1,0 +1,10 @@
+# This runs jsonlint from the locally-installed npm packages.
+#
+# This is the recommended way of doing things; but does require that 'jsonlint'
+# is installed, which may not be possible (right away) when adding Lando to an
+# existing project.
+tooling:
+  lint-syntax-json:
+    service: 'node'
+    cmd:
+      - 'cd /app/docroot/themes/custom/example && npx jsonlint -q'
