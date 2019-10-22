@@ -1,0 +1,33 @@
+# This runs eslint from a standalone Node.js container.
+#
+# This is not the recommended way; but would be useful if it is not possible to
+# install 'eslint', which may be the case if you're adding Lando to an existing
+# project.
+services:
+  # ES5. Choose this or ES6; not both or you'll download more services than you
+  # need.
+  eslint-es5-drupal:
+    type: compose
+    services:
+      image: 'mparker17/eslint-es5-drupal'
+      command: '/opt/drupal/node_modules/.bin/eslint -c /opt/drupal/.eslintrc.legacy.json'
+  # ES5. Choose this or ES6; not both or you'll download more services than you
+  # need.
+  eslint-es6-drupal:
+    type: compose
+    services:
+      image: 'mparker17/eslint-es6-drupal'
+      command: '/opt/drupal/node_modules/.bin/eslint -c /opt/drupal/.eslintrc.json'
+tooling:
+  # ES5. Choose this or ES6; not both or you'll get a YAML parse error
+  # (duplicate keys).
+  lint-style-js:
+    service: 'eslint-es5-drupal'
+    cmd:
+      - '/opt/drupal/node_modules/.bin/eslint -c /opt/drupal/.eslintrc.legacy.json'
+  # ES6. Choose this or ES5; not both or you'll get a YAML parse error
+  # (duplicate keys).
+  lint-style-js:
+    service: 'eslint-es6-drupal'
+    cmd:
+      - '/opt/drupal/node_modules/.bin/eslint -c /opt/drupal/.eslintrc.legacy.json'

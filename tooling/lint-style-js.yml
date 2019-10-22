@@ -1,0 +1,18 @@
+# This runs eslint from the locally-installed npm packages.
+#
+# This is the recommended way of doing things; but does require that 'eslint'
+# is installed, which may not be possible (right away) when adding Lando to an
+# existing project.
+tooling:
+  # ES5. Choose this or ES6; not both or you'll get a YAML parse error
+  # (duplicate keys).
+  lint-style-js:
+    service: 'eslint-es5-drupal'
+    cmd:
+      - 'cd /app/docroot/themes/custom/example && npx eslint -c /app/docroot/core/.eslintrc.legacy.json'
+  # ES6. Choose this or ES5; not both or you'll get a YAML parse error
+  # (duplicate keys).
+  lint-style-js:
+    service: 'eslint-es6-drupal'
+    cmd:
+      - 'cd /app/docroot/themes/custom/example && npx eslint -c /app/docroot/core/.eslintrc.json''
