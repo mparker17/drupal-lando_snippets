@@ -1,3 +1,7 @@
+# This runs phpcs with the Drupal coding standard from the locally-installed
+# Composer packages. This is the recommended way, but does require that both
+# 'squizlabs/php_codesniffer' and 'drupal/coder' are installed, which may not
+# be possible (right away) when adding Lando to an existing project.
 tooling:
   lint-style-php:
     service: 'appserver'

@@ -1,3 +1,4 @@
+# This runs PHP in syntax-checking mode from the appserver service.
 tooling:
   lint-syntax-php:
     service: 'appserver'

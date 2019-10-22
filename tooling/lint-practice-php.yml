@@ -1,3 +1,9 @@
+# This runs phpcs with the DrupalPractice coding standard from the locally-
+# installed Composer packages.
+#
+# This is the recommended way of doing things; but does require that both 
+# 'squizlabs/php_codesniffer' and 'drupal/coder' are installed, which may not
+# be possible (right away) when adding Lando to an existing project.
 tooling:
   lint-practice-php:
     service: 'appserver'

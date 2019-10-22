@@ -1,3 +1,4 @@
+# This runs Node.js in syntax-checking mode from the node service.
 tooling:
   lint-syntax-js:
     service: 'node'
