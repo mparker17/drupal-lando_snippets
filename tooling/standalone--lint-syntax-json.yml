@@ -1,0 +1,16 @@
+# This runs jsonlint from a standalone Node.js container.
+#
+# This is not the recommended way; but would be useful if it is not possible to
+# install 'jsonlint', which may be the case if you're adding Lando to an
+# existing project.
+services:
+  jsonlint:
+    type: compose
+    services:
+      image: 'mparker17/jsonlint'
+      command: '/opt/jsonlint/node_modules/.bin/jsonlint -q'
+tooling:
+  lint-syntax-json:
+    service: 'jsonlint'
+    cmd:
+      - '/opt/jsonlint/node_modules/.bin/jsonlint -q'

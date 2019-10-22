@@ -1,0 +1,17 @@
+# This runs phpcs with the Drupal coding standard from a standalone Docker
+# container.
+#
+# This is not the recommended way; but would be useful if it is not possible to
+# install 'squizlabs/php_codesniffer' and 'drupal/coder', which may be the case
+# if you're adding Lando to an existing project.
+services:
+  phpcs-drupal:
+    type: compose
+    services:
+      image: 'mparker17/phpcs-drupal'
+      command: '/opt/coder/vendor/bin/phpcs --standard=Drupal'
+tooling:
+  lint-style-php:
+    service: 'phpcs-drupal'
+    cmd:
+      - '/opt/coder/vendor/bin/phpcs --standard=Drupal'
