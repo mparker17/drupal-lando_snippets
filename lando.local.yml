@@ -1,2 +1,10 @@
-config:
-  xdebug: true
+services:
+  appserver:
+    xdebug: true
+    config:
+      php: .mparker17.ini
+    overrides:
+      environment:
+        # When you set up a Server inside the Run/Debug configuration, change
+        # "example" below to the name you set there.
+        PHP_IDE_CONFIG: "serverName=example"
